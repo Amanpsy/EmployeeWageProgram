@@ -12,6 +12,11 @@ namespace EmployeewageProgram
         {
             int part_time = 1;
             int full_time = 2;
+            int empHour = 0;
+            int empWage = 0;
+
+            int empRateperHour = 8;
+
             int empcheck;
 
             Random random = new Random();
@@ -20,15 +25,17 @@ namespace EmployeewageProgram
             if (empcheck == 0)
             {
                 Console.WriteLine("Employe is absent");
+                empHour = 0;
             }
-            else if (empcheck == 1)
-            {
-                Console.WriteLine("Employee is working part time");
-            }
+            
+            
             else
                     {
                 Console.WriteLine("Employee is working full time ");
+                empHour = 5;
             }
+            empWage = empHour * empRateperHour;
+            Console.WriteLine("the employee wage is " + empWage);
         }
     }
 }
